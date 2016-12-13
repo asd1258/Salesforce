@@ -1,0 +1,20 @@
+<apex:page Standardcontroller="Contact" tabStyle="Contact" recordSetVar="Contact">
+ <apex:form >
+  <apex:pageBlock Title="Contacts" >
+  
+      <apex:pageblockTable value="{!Contact}" var="a">
+        <apex:column value="{!a.name}"/>
+        
+         <apex:column value="{!a.Email}"/>
+         <apex:column value="{!a.Title}"/>
+         <apex:column value="{!a.Phone}"/>
+     </apex:pageblockTable>
+    </apex:pageBlock> 
+ <apex:actionFunction action="{!delete}" name="Del" reRender="form" >
+
+   <apex:param name="dealid" value="" assignTo="{!SelectedDealId}"/>
+
+</apex:actionFunction>
+</apex:form>
+
+</apex:page>
